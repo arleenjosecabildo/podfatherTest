@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Autoload' => $baseDir . '/app/Libraries/Autoload.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'PHPUnit\\Exception' => $vendorDir . '/phpunit/phpunit/src/Exception.php',
     'PHPUnit\\Framework\\Assert' => $vendorDir . '/phpunit/phpunit/src/Framework/Assert.php',
@@ -665,4 +666,9 @@ return array(
     'TheSeer\\Tokenizer\\TokenCollectionException' => $vendorDir . '/theseer/tokenizer/src/TokenCollectionException.php',
     'TheSeer\\Tokenizer\\Tokenizer' => $vendorDir . '/theseer/tokenizer/src/Tokenizer.php',
     'TheSeer\\Tokenizer\\XMLSerializer' => $vendorDir . '/theseer/tokenizer/src/XMLSerializer.php',
+    'app\\Controllers\\IndexController' => $baseDir . '/app/Controllers/IndexController.php',
+    'app\\Interfaces\\FileHandler' => $baseDir . '/app/Interfaces/FileHandler.php',
+    'app\\Libraries\\CsvHandler' => $baseDir . '/app/Libraries/CsvHandler.php',
+    'app\\Libraries\\Template' => $baseDir . '/app/Libraries/Template.php',
+    'app\\Models\\CsvModel' => $baseDir . '/app/Models/CsvModel.php',
 );

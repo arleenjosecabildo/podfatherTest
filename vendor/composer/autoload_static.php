@@ -35,8 +35,8 @@ class ComposerStaticInitc574da8ad2f52a70257731b8882e1aa0
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -57,6 +57,7 @@ class ComposerStaticInitc574da8ad2f52a70257731b8882e1aa0
     );
 
     public static $classMap = array (
+        'Autoload' => __DIR__ . '/../..' . '/app/Libraries/Autoload.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
@@ -716,6 +717,11 @@ class ComposerStaticInitc574da8ad2f52a70257731b8882e1aa0
         'TheSeer\\Tokenizer\\TokenCollectionException' => __DIR__ . '/..' . '/theseer/tokenizer/src/TokenCollectionException.php',
         'TheSeer\\Tokenizer\\Tokenizer' => __DIR__ . '/..' . '/theseer/tokenizer/src/Tokenizer.php',
         'TheSeer\\Tokenizer\\XMLSerializer' => __DIR__ . '/..' . '/theseer/tokenizer/src/XMLSerializer.php',
+        'app\\Controllers\\IndexController' => __DIR__ . '/../..' . '/app/Controllers/IndexController.php',
+        'app\\Interfaces\\FileHandler' => __DIR__ . '/../..' . '/app/Interfaces/FileHandler.php',
+        'app\\Libraries\\CsvHandler' => __DIR__ . '/../..' . '/app/Libraries/CsvHandler.php',
+        'app\\Libraries\\Template' => __DIR__ . '/../..' . '/app/Libraries/Template.php',
+        'app\\Models\\CsvModel' => __DIR__ . '/../..' . '/app/Models/CsvModel.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
