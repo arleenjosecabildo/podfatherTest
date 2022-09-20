@@ -37,13 +37,12 @@ class IndexController
      */
     public function __construct()
     {
-//         $this->fileHandler = new \app\Libraries\CsvHandler($this->getCsvFile('pod-data.csv'));
 //         $this->view = new \app\Libraries\Template();
     }
 
 
     function init() {
-        $this->fileHandler = new \app\Libraries\CsvHandler($this->getCsvFile('pod-data.csv'));
+        //$this->fileHandler = new \app\Libraries\CsvHandler($this->getCsvFile('pod-data.csv'));
         $this->view = new \app\Libraries\Template();
     }
     /**
@@ -53,14 +52,11 @@ class IndexController
     {
         $this->model= new CsvModel('pod-data.csv');
 
-        print_r($this->model->geHeader());
-        exit();
-
-
-        $this->init();
+        $this->view = new \app\Libraries\Template();
+          
         $table = $this->view->render('Index/table.php', [
-            'header' => $this->fileHandler->getHeader(),
-            'rs' => $this->fileHandler->buildData()
+            'header' => $this->model->getHeader(),
+            'rs' => $this->model->getData()
         ], true);
 
         $this->view->render('Index/index.php', [
