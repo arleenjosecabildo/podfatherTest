@@ -36,9 +36,7 @@ class IndexController
      * constructor
      */
     public function __construct()
-    {
-        // $this->view = new \app\Libraries\Template();
-    }
+    {}
 
     /**
      * Main method
@@ -73,11 +71,6 @@ class IndexController
     public function run()
     {
         $this->index();
-    }
-
-    public function search()
-    {
-        echo 'search';
     }
 }
 
