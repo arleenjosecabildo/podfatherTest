@@ -14,15 +14,15 @@
 
   	<div class="container-fluid">
   		<div class="container row">
-  			<form>
+  			<form method="post" action="/public/index">
               <div class="form-group">
                 <label for="exampleInputEmail1">Search </label>
-                <input type="text" class="form-control" id="search" aria-describedby="seatch" placeholder="Search Csv Data">        
+                <input type="text" name="search" class="form-control" id="search" aria-describedby="seatch" placeholder="Search Csv Data">
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
 			</form>
   		</div>
-  		
+
   		<br/>
       	<div class="row">
       		<div class="col-lg-12 col-md-12 col-sm-12">

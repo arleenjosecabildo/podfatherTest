@@ -6,7 +6,7 @@ use app\Libraries\CsvHandler;
 /**
  *
  * @author arleen
- *        
+ *
  */
 class CsvModel
 {
@@ -47,14 +47,24 @@ class CsvModel
     {
         return $this->fileHandler->buildData();
     }
-    
-    public function search() {
-        
+
+    public function search($keyword = null)
+    {
+        $rows = [];
+        $data = $this->fileHandler->buildData();
+        foreach ($data as $row) {
+            $strLine = strtolower(implode(',', array_values($row)));
+            if (strpos($strLine, $keyword) !== false) {
+                $rows[] = $row;
+            }
+        }
+
+        return $rows;
     }
 
     /**
      *
-     * @param unknown $file
+     * @param string $file
      * @return string|mixed
      */
     private function getCsvFile($file)

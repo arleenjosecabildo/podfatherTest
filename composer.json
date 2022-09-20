@@ -1,5 +1,8 @@
 {
     "require-dev": {
         "phpunit/phpunit": "9"
+    },
+    "autoload": {
+        "classmap": ["app/Models", "app/Controllers", "app/Libraries", "app/Interfaces"]
     }
 }
