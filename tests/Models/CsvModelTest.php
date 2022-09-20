@@ -27,6 +27,9 @@ class CsvModelTest extends TestCase
      */
     private $file = 'pod-data.csv';
 
+    /**
+     * test header
+     */
     function testGetHeader()
     {
         $expected = [
@@ -45,6 +48,9 @@ class CsvModelTest extends TestCase
         assertEquals($expected, $actual);
     }
 
+    /**
+     * test a private method
+     */
     function testGetCsvFile()
     {
         $testFile = 'pod-data.csv';
